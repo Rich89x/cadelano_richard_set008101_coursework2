@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/message.css">    
+            
+            <style>
+                .button {
+                  display:inline-block;
+                  border-radius: 4px;
+                  background-color: darkturquoise;
+                  border: none;
+                  color: #FFFFFF;
+                  text-align: center;
+                  font-size: 28px;
+                  padding: 20px;
+                  width: 200px;
+                  transition: all 0.5s;
+                  cursor: pointer;
+                  margin: 5px;
+                }
+                
+                .button span {
+                  cursor: pointer;
+                  display: inline-block;
+                  position: relative;
+                  transition: 0.5s;
+                }
+                
+                .button span:after {
+                  content: '\00bb';
+                  position: absolute;
+                  opacity: 0;
+                  top: 0;
+                  right: -20px;
+                  transition: 0.5s;
+                }
+                
+                .button:hover span {
+                  padding-right: 25px;
+                }
+                
+                .button:hover span:after {
+                  opacity: 1;
+                  right: 0;
+                }
+            </style>
+            <title> E-mail Sender</title>        
+        </head>
+            <div class="topnav">
+                <a class="active" href="..\main.html">Home</a>
+                <div class="logout-container">
+                  <form action="/logout">               
+                  <button type="submit">Logout</button>
+                  </form>
+                </div>
+              </div>
+              
+    <body>
+            <div style="display:flex; justify-content:center;">
+                    
+<div class="mail-form">
+        <h1>The Message Platform</h1>
+
+        <p>Through this Platform will be possible to send crypted emails to everyone.</p>
+
+
+    <form action="/message" method="post">
+        
+        <input type="text" name="email" placeholder="To" required=""><br>
+        <div id = "input_area"; style="display:flex; justify-content:center;">
+        <textarea rows="1" cols="50" autofocus id="inp" style="width: 473px; height: 36;">Insert Message</textarea><br>
+        <button type="button" onclick="encode_morse()" id="encode_button">Encodify Message</button><br>
+        </div>
+
+        <div id="output_area";>
+        <textarea rows="5" cols="40" autofocus id="output" style="width: 597px; height: 90;">Insert Message</textarea><br>
+        </div>
+        
+        <input type="submit" value="Send"><br>
+           
+    </form>
+
+    <script type ="text/javascript" src="try morse.js"></script>
+    <div style="display:flex; justify-content:center;">
+          
+        <a class="button" style="vertical-align: middle" href="..\main.html"><span>Back</span></a></button><br>
+            
+            </div>
+</div>
+</div>
+</div>
+</body>
+</html>

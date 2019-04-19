@@ -1,0 +1,27 @@
+{
+  "name": "coursework2",
+  "version": "1.0.0",
+  "description": "nodejs authentication and message platform",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Richard Cadelano",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "connect-mongo": "^2.0.3",
+    "express": "^4.16.4",
+    "express-generator": "^4.16.0",
+    "express-session": "^1.16.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.5.2",
+    "nodemailer": "^6.1.0",
+    "nodemon": "^1.18.11",
+    "parseurl": "^1.3.3",
+    "path": "^0.12.7",
+    "pug": "^2.0.3"
+  }
+}

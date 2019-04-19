@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="cyphers.css">  
+          
+        <style>
+            
+            .button {
+              display:inline-block;
+              border-radius: 4px;
+              background-color: darkturquoise;
+              border: none;
+              color: #FFFFFF;
+              text-align: center;
+              font-size: 28px;
+              padding: 20px;
+              width: 200px;
+              transition: all 0.5s;
+              cursor: pointer;
+              margin: 5px;
+            }
+            
+            .button span {
+              cursor: pointer;
+              display: inline-block;
+              position: relative;
+              transition: 0.5s;
+            }
+            
+            .button span:after {
+              content: '\00bb';
+              position: absolute;
+              opacity: 0;
+              top: 0;
+              right: -20px;
+              transition: 0.5s;
+            }
+            
+            .button:hover span {
+              padding-right: 25px;
+            }
+            
+            .button:hover span:after {
+              opacity: 1;
+              right: 0;
+            }
+        </style>
+         <div class="topnav">
+          <a class="active" href="/message">Message</a>
+          <div class="logout-container">
+            <form action="/logout">               
+            <button type="submit">Logout</button>
+            </form>
+          </div>
+        </div>
+        <title> Ciphers Coursework</title>
+    </head>
+    <body>
+        
+        <h1>Ciphers and Encryption</h1>
+        <p>Cryptohraphy is a method to secure communications by tranlating a "plain text" message<br>
+        into an undecryptable message. Is a method used since the ancient times to protect secret <br>
+        conversations and provide security.<br>
+        The fist known example of Cryptohraphy is represented by the use of hyeroglyphics in the Ancient Egypt,<br>
+        where the "original message" was translated into that kind of text by scribes.</p>
+        <figure>
+          <p><img src="img\gero.JPG">
+            <figcaption>Hyeroglyphics Example</figcaption>
+        </figure>
+        <p>Even if in this particular case we are not talking about a secret writing, that could be considered <br>
+          as the first example of a message translation.
+        </p>
+        <p>Retracing the history of Cryptohraphy, is almost impossible to not mention Julius Caesar and his <br>
+          Caesar Shift Cypher: in this cypher the letters of the message are shifted by an agreed number of <br>
+          positions, so when the message arrived at destination, the recipied had to shift the letters back to <br>
+          obtain the original text.</p>
+        <figure>
+          <p><img src="img\Caesar.PNG">
+            <figcaption>Caesar Cipher Table</figcaption>
+        </figure>
+        <p>Is possible to observe an Example of the Caesar Cipher here:</p>
+
+        <div style="display:flex; justify-content:center;">
+        <a class="button" style="vertical-align: middle" href="Cypher\caesar.html"><span>Caesar Cipher</span></a></button><br>  
+        </div>
+        <p>Another famous example of Cryptografy is represented by the Morse Code: this code consist into translate <br>
+          each letter of the message into a series of short signals (represented as Dots) and long signals (represented as dashes).<br>
+        </p>
+
+        <figure>
+        <p><img src="img\morse.JPG">
+          <figcaption>Morse Alphabet Table</figcaption>
+        </figure>
+        
+
+        <p>Is possible to observe an Example of the Morse Code here:</p>
+
+        <div style="display:flex; justify-content:center;">
+        <a class="button" style="vertical-align: middle" href="Cypher\morse.html"><span>Morse Code</span></a></button><br>  
+        </div>    
+        
+            
+        
+      
+    </body>
+</html>

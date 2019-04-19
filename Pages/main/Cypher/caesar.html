@@ -1,0 +1,94 @@
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="caesar.css">
+            <style>
+                .button {
+                  display:inline-block;
+                  border-radius: 4px;
+                  background-color: darkturquoise;
+                  border: none;
+                  color: #FFFFFF;
+                  text-align: center;
+                  font-size: 28px;
+                  padding: 20px;
+                  width: 200px;
+                  transition: all 0.5s;
+                  cursor: pointer;
+                  margin: 5px;
+                }
+                
+                .button span {
+                  cursor: pointer;
+                  display: inline-block;
+                  position: relative;
+                  transition: 0.5s;
+                }
+                
+                .button span:after {
+                  content: '\00bb';
+                  position: absolute;
+                  opacity: 0;
+                  top: 0;
+                  right: -20px;
+                  transition: 0.5s;
+                }
+                
+                .button:hover span {
+                  padding-right: 25px;
+                }
+                
+                .button:hover span:after {
+                  opacity: 1;
+                  right: 0;
+                }
+            </style>
+           <div class="topnav">
+            <a class="active" href="..\main.html">Home</a>
+            <a class="active" href="/message">Message</a>
+            <div class="logout-container">
+              <form action="/logout">               
+              <button type="submit">Logout</button>
+              </form>
+            </div>
+          </div>
+        <title> Caesar cipher</title>        
+    </head>
+    <body>
+        <h1>The Caesar Cipher</h1>
+        <p>The Caesar Cipher, named after Julius Caesar, is one of the most anciest cyphers known,<br>
+          it consists into shift each letter of the message by an agreed number, common use in the past <br>
+          was 3 positions, to encrypt the message. It is though that Julius Caesar developed this cypher <br>
+          to transmit secret messages to his generals.</p>
+
+          <figure>
+          <p><img src="img\caesar2.PNG">
+            <figcaption>Caesar Cypher Diagram</figcaption>
+          </figure>
+
+        <p>Beside the simplicity of use of this cipher, is necessary to consider that it is an higly <br>
+        unsecure encryption method, that could be easily brake by hands. There is a variable of the <br>
+        caesar cypher called ROT13 where the letters are switched with a fixed number of 13 positions.</p>
+        <p>Example of Caesar cipher:</p>
+
+
+        <div id="input_area"; style="display:flex; justify-content:center;">
+          
+            
+          <textarea rows="1" cols="50" autofocus id="message">Insert Message</textarea><br>
+            <input type="number" value="7" id="offset"/>
+            <button type="button" onclick="encode_cypher()" id="encode_button">Encodify Message</button>
+        </div>
+        <div id="output_area" style="display:flex; justify-content:center">
+            <p>Message:<br />
+            <textarea rows="1" cols="50" autofocus id="finish"></textarea>
+        </p>
+        </div>
+        
+        <script type ="text/javascript" src="try cypher.js"></script>
+        <div style="display:flex; justify-content:center;">
+           
+            <a class="button" style="vertical-align: middle" href="..\main.html"><span>Back</span></a></button><br>
+            
+            </div>
+    </body>
+</html>

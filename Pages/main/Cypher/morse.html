@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="morse.css">
+        <style>
+            .button {
+              display:inline-block;
+              border-radius: 4px;
+              background-color: darkturquoise;
+              border: none;
+              color: #FFFFFF;
+              text-align: center;
+              font-size: 28px;
+              padding: 20px;
+              width: 200px;
+              transition: all 0.5s;
+              cursor: pointer;
+              margin: 5px;
+            }
+            
+            .button span {
+              cursor: pointer;
+              display: inline-block;
+              position: relative;
+              transition: 0.5s;
+            }
+            
+            .button span:after {
+              content: '\00bb';
+              position: absolute;
+              opacity: 0;
+              top: 0;
+              right: -20px;
+              transition: 0.5s;
+            }
+            
+            .button:hover span {
+              padding-right: 25px;
+            }
+            
+            .button:hover span:after {
+              opacity: 1;
+              right: 0;
+            }
+        </style>
+        <div class="topnav">
+            <a class="active" href="..\main.html">Home</a>
+            <a class="active" href="/message">Message</a>
+            <div class="logout-container">
+              <form action="/logout">               
+              <button type="submit">Logout</button>
+              </form>
+            </div>
+          </div>
+        <title> Morse code Encrypter</title>        
+    </head>
+    <body>
+        <h1>The Morse code</h1>
+        <p>The Morse code was invented by the American Samuel Morse (1791 - 1872).<br>
+          During the 1830, after the invention of the first telegraph in England,<br>
+          that was able to send messages using electric signals to line up magnetic <br>
+          needles on a grid containing the letters of the alphabet, Samuel Morse and <br>
+          Alfred Vail developed a single-circuit telegraph that sent the signal across <br>
+          the wire by pushing the operator key down. </p>
+
+        <figure>
+        <p><img src="img\morse2.JPG">
+            <figcaption>Morse Telegraph</figcaption>
+        </figure>
+
+
+        <p>To transmit messages through their telegraph Morse and Veil developed the <br>
+         Morse Code: this code assigns letters and numbers to dots and dashes, dots <br>
+         for short impulses and dashes for long impulses, this code is based on the <br>
+         frequency of use: letters used often = simple code. <br>
+         The most common message in morse code is the S.O.S. (...---...).</p>
+        <p>Here an Example of Morse Encrypter:</p>
+
+        <div id = "input_area"; style="display:flex; justify-content:center;">
+            <textarea rows="1" cols="50" autofocus id="inp">Insert Message</textarea><br>
+            <button type="button" onclick="encode_morse()" id="encode_button">Encodify Message</button>
+            <button type="button" onclick="decode_morse()" id="decode_button">Decodify Message</button>
+            
+            
+        </div>
+        <div id="output_area";>
+            <p>Message:<br />
+            <div id="output"; style="display:flex; justify-content:center;"></div>
+            <div id="output2"; style="display:flex; justify-content:center;"></div>
+        </p>
+        </div>
+        <script type ="text/javascript" src="try morse.js"></script>
+        <script type ="text/javascript" src="try morse2.js"></script>
+        <div style="display:flex; justify-content:center;">
+            <a class="button" style="vertical-align: middle" href="..\main.html"><span>Back</span></a></button><br>  
+            </div>
+    </body>
+</html>
